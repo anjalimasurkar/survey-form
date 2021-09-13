@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">Muggleborn Parents' Association - Interest survey</h1>
+      <p id="description">We are gathering feedback about this idea - an association for muggleborn parents. This could become a way for parents of muggleborns to keep abreast of things in the wizarding world. Thank you for your input.</p>
+      <form id="survey-form">
+        <div class="form-group">
+          <label for="name" id="name-label">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name" class="form-control" required/>
+        </div>
+
+        <div class="form-group">
+          <label for="email" id="email-label">Email Id:</label>
+          <input type="email" name="email"  id="email" placeholder="Enter your email id" class="form-control" required/>
+        </div>
+
+        <div class="form-group">
+          <label for="age" id="number-label">Age (Optional):</label>
+          <input type="number" name="age" id="number" placeholder="Enter your age (optional)" min="10" max="100" class="form-control"/>
+        </div>
+
+        <div class="form-group">
+          <label for="dropdown">Is your child currently attending Hogwarts?</label>
+          <select name="dropdown" id="dropdown" class="form-control" required>
+            <option disabled selected value>Select enrollment status.</option>
+            <option value="yes">Yes, currently enrolled.</option>
+            <option value="notyet">No, enrolled for next term as a first-year.</option>
+            <option value="no">No, graduated/dropped out of Hogwarts.</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>Are you interested in joining a muggleborn support group?</p>
+          <label for="interest"><input type="radio" name="interest" value="Yes" checked class="input-radio"> Yes</label>
+
+          <label for="interest"><input type="radio" name="interest" value="No" class="input-radio"> No</label>
+
+          <label for="interest"><input type="radio" name="interest" value="Undecided" class="input-radio"> Undecided</label>
+        </div>
+
+        <div class="form-group">
+          <p>On a scale of 1-10, how easy it was for you to navigate the wizarding world as an outsider?</p>
+          <input type="range" value="" id="scale" min="1" max="10" required>
+            <datalist id="scale">
+              <option value="1" label="1-Extremely easy"></option>
+              <option value="2"></option>
+              <option value="3"></option>
+              <option value="4"></option>
+              <option value="5"></option>
+              <option value="6"></option>
+              <option value="7"></option>
+              <option value="8"></option>
+              <option value="9"></option>
+              <option value="10" label="10-Extremely difficult"></option>
+            </datalist>
+        </div>
+
+        <div class="form-group">
+          <p>Please select all the things this group could work on.</p>
+          <label for="support">
+            <input type="checkbox" name="function" value="support" id="support"> Support for first-year muggleborn students and their parents.
+          </label>
+
+          <label for="updates">
+            <input type="checkbox" name="function" value="updates" id="updates"> Updates on the laws, customs and practices of wizarding world and how they apply to us.
+          </label>
+
+          <label for="resources">
+            <input type="checkbox" name="function" value="resources" id="resources"> Resources for keeping up with their non-magical education -GCSE and A-levels
+          </label>
+
+          <label for="meetups">
+            <input type="checkbox" name="function" value="meetups" id="meetups"> Meetups for socializing and networking.
+          </label>
+
+          <label for="other">
+            <input type="checkbox" name="function" value="other" id="other"> Other:
+            <input type="text" name="function" id="specifyother" placeholder=" Please specify">
+          </label>
+
+        </div>
+
+        <div class="form-group">
+          <p>Any other thoughts or comments on this idea:</p>
+          <textarea name="name" rows="5" cols="80" class="input-textarea" placeholder="Enter your comment here....."></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button"> Submit </button>
+      </form>
+    </div>
+  </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>

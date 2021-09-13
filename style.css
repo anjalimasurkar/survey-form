@@ -1,0 +1,208 @@
+html{
+  font-size: 62.5%;
+}
+
+* {
+  font-family: Georgia,serif;
+  box-sizing:border-box;
+}
+
+input {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+body{
+  background-image: linear-gradient(115deg,rgba(160, 82, 45, 0.5),rgba(136, 136, 206, 0.4)), url("image/hogwartsexpress.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: white;
+  margin: 0;
+}
+
+h1{
+  color: saddlebrown;
+  text-align: center;
+  font-weight: bolder;
+  line-height: 1.4;
+  margin: 0 auto 0 auto;
+}
+
+#description{
+  text-align: center;
+  font-style: italic;
+}
+
+.container{
+  width: 100%;
+  margin: 3rem auto 0 auto;
+}
+
+#survey-form{
+  background: #354a21;
+  opacity: 85%;
+  margin: 1.5rem auto 0 auto;
+}
+
+form{
+  display:block;
+  padding: 4rem;
+  border-radius: 0.5rem;
+}
+
+label{
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 0.8rem;
+}
+
+.form-group{
+  margin: 0 auto 1rem auto;
+  padding: 0.5rem;
+}
+
+input, select{
+  display:inline-block;
+  max-width: 100%;
+  color: #495057;
+  border-radius: 0.5rem;
+  padding:0.8rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.625rem;
+  min-height: 0.5rem;
+  min-width: 1.25rem;
+}
+
+.form-control{
+  display: block;
+  width: 100%;
+  background-clip: padding-box;
+}
+
+.submit-button{
+  display: block;
+  font-family: inherit;
+  font-size: 2rem;
+  width:100%;
+  background-color: #a0522d;
+  padding: 1.1rem;
+  color: white;
+  min-height: 3rem;
+  border: 1px solid saddlebrown;
+}
+
+.submit-button:hover{
+  background-color: #8b4513;
+  color: black;
+}
+
+#other, #specifyother{
+  display: inline-flex;
+}
+
+#specifyother{
+  visibility: hidden;
+}
+
+/*styling checkbox*/
+input[type="checkbox"] {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid gray;
+    color: #ffdb58;
+    transform: translateY(-0.1rem);
+}
+
+input[type="checkbox"]::before {
+    content:'\2713';
+    position: relative;
+    font-size: 3rem;
+    right: 1.2rem;
+    top: -1.5rem;
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+/* Use `visibility` instead of `display` to avoid recalculating layout */
+    visibility: visible;
+}
+
+/*makes the text field visible only when checkbox "Other" is selected*/
+#other:checked ~ #specifyother{
+    visibility: visible;
+  }
+
+
+/*styling radio buttons*/
+input[type="radio"] {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+
+input[type='radio']:checked:after {
+    content:"";
+    position: absolute;
+    transform: translate(-0.6rem, -0.6rem);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 0.2rem solid transparent;
+    background: #ffdb58;
+}
+
+/*styling input[type="range"]*/
+input[type="range"] {
+  background: white;
+  width:100%;
+  height: 0.5rem;
+  padding:0;
+}
+
+input [type="range"]::-webkit-slider-runnable-track {
+   border: none;
+   border-radius: 25%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid white;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background: #ffdb58;
+    padding:0px;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  background:black;
+}
+
+datalist {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+}
+.input-textarea {
+  min-height: 11rem;
+  width: 100%;
+  resize: vertical;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
